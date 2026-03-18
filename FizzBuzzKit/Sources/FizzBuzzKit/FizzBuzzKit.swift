@@ -1,8 +1,8 @@
-public class FizzBuzzKit {
+public final class FizzBuzzKit: Sendable {
     /// Filter function that takes a number and returns `true` if the number satisfies a rule
-    public typealias FilterFunction = (Int) -> Bool
+    public typealias FilterFunction = @Sendable (Int) -> Bool
 
-    var rules: [( FilterFunction, String)]
+    let rules: [( FilterFunction, String)]
 
     /// Initialize FizzBuzzKit with filter functions and result strings
     /// - Parameter rules: Array of (FilterFunction,String) which sets the rules
